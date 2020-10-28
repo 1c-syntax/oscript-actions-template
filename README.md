@@ -38,6 +38,8 @@
 
 Остальное по умолчанию как в `testing.yml`. Не стоит забывать что нужно предварительно заполнить секреты `SONARQUBE_HOST` и `SONARQUBE_TOKEN`.
 
+И последнее. В файле `sonar-project.properties` нужно сменить ключ и название проекта для SonarQube.
+
 ### Блок CD
 
 В блок входит [release.yml](/.github/workflows/release.yml):
