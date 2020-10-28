@@ -15,16 +15,19 @@ jobs:
       # Загрузка проекта
       - name: Актуализация
         uses: actions/checkout@v2
+
       # Установка OneScript конкретной версии
       - name: Установка OneScript
         uses: otymko/setup-onescript@v1.0
         with:
           version: ${{ matrix.oscript_version }}
+
       # Установка зависимостей пакета
       - name: Установка зависимостей
         run: |
           opm install opm
-          opm install -dev
+          opm install --dev
+          
       # Задача тестирования, в результате ожидается успешное выполнение
       - name: Тестирование
-        run: opm run test
+        run: oscript ./tasks/test.os

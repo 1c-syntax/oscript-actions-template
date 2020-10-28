@@ -3,7 +3,7 @@ name: Контроль качества
 on: [push, pull_request]
 jobs:
   build:
-    if: github.repository == 'owner/my-repo'
+    if: github.repository == 'owner/project'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -32,12 +32,11 @@ jobs:
       - name: Установка зависимостей
         run: |
           opm install opm
-          opm install -dev
-          opm install coverage
+          opm install --dev
 
       # Запуск тестов и сбор покрытия кода
       - name: Покрытие кода
-        run: opm run coverage
+        run: oscript ./tasks/coverage.os
 
       - name: Извлечение версии пакета
         shell: bash
