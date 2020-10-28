@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (C) 2020 Tymko Oleg <olegtymko@yandex.ru> and contributors
+# All rights reserved.
+
 name: Контроль качества
 # Любой пуш и pr в проекте но с фильтром по основному проекту
 on: [push, pull_request]
@@ -56,6 +60,7 @@ jobs:
             -Dsonar.projectVersion=${{ steps.extract_version.outputs.version }}
 
       # Анализ проекта в SonarQube (PR)
+      # https://docs.sonarqube.org/latest/analysis/pull-request/
       - name: Анализ в SonarQube (pull-request)
         if: github.event_name == 'pull_request'
         run: sonar-scanner
