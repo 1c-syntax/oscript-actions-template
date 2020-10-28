@@ -1,0 +1,7 @@
+# Файлы
+*.ospx
+
+# Каталоги
+oscript_modules/
+.scannerwork/
+coverage/
