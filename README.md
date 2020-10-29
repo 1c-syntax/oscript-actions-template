@@ -49,6 +49,6 @@
 #### release.yml
 
 В текущем workflow нужно поменять следующее:
-* В строке `package_mask: ["project-*.ospx"]` заменить `project-*.ospx` на маску нового пакета. Например: `gitsync-*.ospx`.
+* В строке `PACKAGE_MASK: project-*.ospx` заменить `project-*.ospx` на маску нового пакета. Например: `gitsync-*.ospx`.
 
 Остальное по умолчанию как в `testing.yml`. Не стоит забывать что нужно предварительно заполнить секреты `OSHUB_TOKEN`.
