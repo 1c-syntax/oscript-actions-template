@@ -2,6 +2,10 @@
 
 Шаблон нового проекта для библиотеки на OneScript
 
+## Пример использования
+
+Команда SilverBulleters на стриме [Инженерные практики в OpenSource на GitHub. Часть I - Библиотека на OneScript](https://www.youtube.com/watch?v=oAi8F8WFZL0) разобрала как использовать этот шаблон для библиотек OneScript.
+
 ## Автоматизация
 
 Для автоматизации рутинных и скучных действий используется [GitHub Actions](https://github.com/features/actions).
